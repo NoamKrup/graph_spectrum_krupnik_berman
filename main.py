@@ -4,34 +4,39 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import scipy
 from scipy import linalg
+from itertools import chain, combinations
+import graph_utils as gu
+import arithmetic_utils as au
+import sandbox
 
-def crete_simple_graph():
-    G = nx.Graph()
-    G.add_node(1)
-    G.add_nodes_from([2, 3])
-    G.add_edge(1, 2)
-    e = (2, 3)
-    G.add_edge(*e)
-    # G.add_edges_from([(3, 4), (4, 5), (1, 5)])
-    # G.add_edges_from([(1, 2, {"color": "blue"}), (2, 3, {"weight": 8})])
-    return G
+def create_all_graphes_with_n_vertices(n):
+    if n == 1:
+        g = nx.Graph()
+        g.add_node(1)
+        return [g]
+    else:
+        graphs = set()
+        smaller_sub_graphs = create_all_graphes_with_n_vertices(n - 1)
+        for g in smaller_sub_graphs:
+            g0 = g.copy()
+            g0.add_node(n)
+            subgraph_vertices = list(range(1, n))
+            for vertices in au.powerset(subgraph_vertices):
+                g1 = g0.copy()
+                for vertex in vertices:
+                    g1.add_edge(n, vertex)
+                    # adj = nx.adjacency_matrix(g1)
+                    # print(adj.todense(), "\n")
+                    graphs.add(g1)
+        return graphs
 
-
-def get_eigenvalues_of_graph(G):
-    A = nx.adjacency_matrix(G)
-    print(f'Adjacency matrix :\n{A.todense()}'.replace("[", "").replace("]", "").replace("\n ", "\n"))
-    eigenvalues = linalg.eigh(A.todense(),  eigvals_only=True)
-    #round eigenvalues to 4 decimal places
-    eigenvalues = [round(eigenvalue, 4) for eigenvalue in eigenvalues]
-    return eigenvalues
 
 if __name__ == '__main__':
     eigenvalues_set = set()
-    G = crete_simple_graph()
-    nx.draw(G, with_labels=True)
-    A = nx.adjacency_matrix(G)
-    eigenvalues = get_eigenvalues_of_graph(G)
-    eigenvalues_set.add(tuple(eigenvalues))
-    print(f'Eigenvalues of graph G: {eigenvalues}')
-    print(f'Eigenvalues set: {eigenvalues_set}')
-    # plt.show()
+    a_matrix_set = set()
+    graphs = create_all_graphes_with_n_vertices(4)
+    for g in graphs:
+        formated_adjacency_matrix = gu.get_formatted_adjacency_matrix(g);
+        print(f'Adjacency matrix of graph G:\n{formated_adjacency_matrix}\n')
+        # a_matrix_set.add(gu.get_adjacency_matrix(g))
+
