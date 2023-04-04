@@ -24,6 +24,7 @@ def create_all_graphes_with_n_vertices(n):
             g0 = g.copy()
             g0.add_node(n)
             subgraph_vertices = list(range(1, n))
+            graphs.add(g0)
             for vertices in au.powerset(subgraph_vertices):
                 g1 = g0.copy()
                 for vertex in vertices:
@@ -33,7 +34,7 @@ def create_all_graphes_with_n_vertices(n):
 
 
 def get_eigenvalues_multy_set(graphs):
-    eigenvalues_set = counter()
+    eigenvalues_set = set()
     graphs = create_all_graphes_with_n_vertices(5)
     for g in graphs:
         eigenvalues = gu.get_eigenvalues_of_graph(g)
@@ -41,14 +42,31 @@ def get_eigenvalues_multy_set(graphs):
     return eigenvalues_set
 
 
-if __name__ == '__main__':
-    graphs = create_all_graphes_with_n_vertices(5)
-    counter = 1
+def print_all_graphs_with_n_vertices_to_file(n):
+    graphs = create_all_graphes_with_n_vertices(n)
+    text = ''
+    graph_counter = 1
+    file_name = f'graphs_{n}_vertices.txt'
     for g in graphs:
         formated_adjacency_matrix = gu.get_formatted_adjacency_matrix(g)
-        print(f'Adjacency matrix of the {counter}\'s graph:\n{formated_adjacency_matrix}\n')
         eigenvalues = gu.get_eigenvalues_of_graph(g)
-        print(f'Eigenvalues of the {counter}\'s graph: {eigenvalues}\n')
-        counter += 1
+        formated_eigenvalues = gu.format_eigenvalues(eigenvalues)
+        text += f'------ graph {graph_counter} -----------\n'
+        text += f'Adjacency matrix :\n{formated_adjacency_matrix}\n'
+        text += f'Eigenvalues : {formated_eigenvalues}\n\n'
+        graph_counter += 1
+    au.print_to_file(file_name, text)
+
+
+if __name__ == '__main__':
+    print_all_graphs_with_n_vertices_to_file(4)
+
+    # for g in graphs:
+    #     formated_adjacency_matrix = gu.get_formatted_adjacency_matrix(g)
+    #     print(f'Adjacency matrix of the {graph_counter}\'s graph:\n{formated_adjacency_matrix}\n')
+    #     eigenvalues = gu.get_eigenvalues_of_graph(g)
+    #     formated_eigenvalues = gu.format_eigenvalues(eigenvalues)
+    #     print(f'Eigenvalues of the {graph_counter}\'s graph: {formated_eigenvalues}\n')
+    #     graph_counter += 1
         # a_matrix_set.add(gu.get_adjacency_matrix(g))
 

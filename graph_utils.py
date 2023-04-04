@@ -20,10 +20,18 @@ def get_formatted_adjacency_matrix(G):
     return f'{A}'.replace("[", "").replace("]", "").replace("\n ", "\n")
 
 
+def format_eigenvalues(eigenvalues):
+    eigenvalues = [round(eigenvalue, 4) for eigenvalue in eigenvalues]
+    for eigenvalue in eigenvalues:
+        if eigenvalue == 0:
+            eigenvalue = 0
+    return eigenvalues
+
+
 def get_eigenvalues_of_graph(G):
     A = nx.adjacency_matrix(G)
-    print(f'Adjacency matrix :\n{A.todense()}'.replace("[", "").replace("]", "").replace("\n ", "\n"))
+    printable = f'Adjacency matrix :\n{A.todense()}'.replace("[", "").replace("]", "").replace("\n ", "\n")
     eigenvalues = linalg.eigh(A.todense(), eigvals_only=True)
     # round eigenvalues to 4 decimal places
-    eigenvalues = au.format_eigenvalues(eigenvalues)
+    eigenvalues = format_eigenvalues(eigenvalues)
     return eigenvalues
