@@ -1,7 +1,7 @@
 import networkx as nx
 from scipy import linalg
 from itertools import chain, combinations
-
+import arithmetic_utils as au
 
 def create_simple_graph_with_edges(edges):
     g = nx.Graph()
@@ -25,5 +25,5 @@ def get_eigenvalues_of_graph(G):
     print(f'Adjacency matrix :\n{A.todense()}'.replace("[", "").replace("]", "").replace("\n ", "\n"))
     eigenvalues = linalg.eigh(A.todense(), eigvals_only=True)
     # round eigenvalues to 4 decimal places
-    eigenvalues = [round(eigenvalue, 4) for eigenvalue in eigenvalues]
+    eigenvalues = au.format_eigenvalues(eigenvalues)
     return eigenvalues
