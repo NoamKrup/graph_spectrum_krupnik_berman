@@ -15,18 +15,15 @@ def get_adjacency_matrix(G):
     return A.todense()
 
 
-def get_formatted_adjacency_matrix(G):
-    A = get_adjacency_matrix(G)
-    return f'{A}'.replace("[", "").replace("]", "").replace("\n ", "\n")
+def get_formatted_adjacency_matrix(g):
+    a = get_adjacency_matrix(g)
+    return f'{a}'.replace("[", "").replace("]", "").replace("\n ", "\n")
 
 
 def format_eigenvalues(eigenvalues):
     eigenvalues = [round(eigenvalue, 4) for eigenvalue in eigenvalues]
-    for eigenvalue in eigenvalues:
-        if eigenvalue == 0:
-            eigenvalue = 0
-    return eigenvalues
-
+    eigenvalues2 = list(map(lambda x: 0 if x == 0 or x == -0 else x, eigenvalues))
+    return eigenvalues2
 
 def get_eigenvalues_of_graph(G):
     A = nx.adjacency_matrix(G)
@@ -35,3 +32,24 @@ def get_eigenvalues_of_graph(G):
     # round eigenvalues to 4 decimal places
     eigenvalues = format_eigenvalues(eigenvalues)
     return eigenvalues
+
+
+def create_all_graphes_with_n_vertices(n):
+    if n == 1:
+        g = nx.Graph()
+        g.add_node(1)
+        return [g]
+    else:
+        graphs = set()
+        smaller_sub_graphs = create_all_graphes_with_n_vertices(n - 1)
+        for g in smaller_sub_graphs:
+            g0 = g.copy()
+            g0.add_node(n)
+            subgraph_vertices = list(range(1, n))
+            graphs.add(g0)
+            for vertices in au.powerset(subgraph_vertices):
+                g1 = g0.copy()
+                for vertex in vertices:
+                    g1.add_edge(n, vertex)
+                    graphs.add(g1)
+        return graphs
