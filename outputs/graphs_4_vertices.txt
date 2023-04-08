@@ -1,164 +1,252 @@
 ------ graph 1 -----------
 Adjacency matrix :
-0 0 0 0
-0 0 1 0
-0 1 0 1
-0 0 1 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+0 1 1 0
+1 0 0 1
+1 0 0 0
+0 1 0 0
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
 
 ------ graph 2 -----------
 Adjacency matrix :
-0 0 0 0
-0 0 0 1
-0 0 0 1
-0 1 1 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+0 0 1 1
+0 0 1 1
+1 1 0 0
+1 1 0 0
+Eigenvalues : [-2.0, 0, 0, 2.0]
 
 ------ graph 3 -----------
 Adjacency matrix :
 0 0 0 1
 0 0 1 1
-0 1 0 0
-1 1 0 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
+0 1 0 1
+1 1 1 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
 
 ------ graph 4 -----------
 Adjacency matrix :
-0 0 0 1
-0 0 0 1
-0 0 0 1
-1 1 1 0
+0 1 0 0
+1 0 1 1
+0 1 0 0
+0 1 0 0
 Eigenvalues : [-1.7321, 0, 0, 1.7321]
 
 ------ graph 5 -----------
 Adjacency matrix :
 0 0 1 1
-0 0 0 0
-1 0 0 0
-1 0 0 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+0 0 1 0
+1 1 0 1
+1 0 1 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
 
 ------ graph 6 -----------
 Adjacency matrix :
-0 0 0 1
-0 0 1 0
 0 1 0 1
 1 0 1 0
+0 1 0 0
+1 0 0 0
 Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
 
 ------ graph 7 -----------
 Adjacency matrix :
 0 0 1 0
-0 0 0 0
-1 0 0 1
-0 0 1 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+0 0 1 1
+1 1 0 1
+0 1 1 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
 
 ------ graph 8 -----------
 Adjacency matrix :
-0 0 0 0
-0 0 1 1
-0 1 0 1
-0 1 1 0
-Eigenvalues : [-1.0, -1.0, 0, 2.0]
+0 0 1 0
+0 0 0 1
+1 0 0 0
+0 1 0 0
+Eigenvalues : [-1.0, -1.0, 1.0, 1.0]
 
 ------ graph 9 -----------
 Adjacency matrix :
-0 1 1 0
-1 0 1 1
-1 1 0 0
 0 1 0 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+1 0 1 0
+0 1 0 1
+0 0 1 0
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
 
 ------ graph 10 -----------
 Adjacency matrix :
 0 0 1 1
-0 0 0 1
-1 0 0 0
-1 1 0 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
+0 0 1 1
+1 1 0 1
+1 1 1 0
+Eigenvalues : [-1.5616, -1.0, 0, 2.5616]
 
 ------ graph 11 -----------
 Adjacency matrix :
-0 0 0 1
 0 0 1 1
-0 1 0 1
-1 1 1 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+0 0 0 0
+1 0 0 0
+1 0 0 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
 
 ------ graph 12 -----------
 Adjacency matrix :
-0 0 1 0
-0 0 1 0
+0 1 0 1
+1 0 1 1
+0 1 0 0
 1 1 0 0
-0 0 0 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
 
 ------ graph 13 -----------
 Adjacency matrix :
 0 1 1 1
-1 0 1 0
-1 1 0 0
 1 0 0 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+1 0 0 0
+1 0 0 0
+Eigenvalues : [-1.7321, 0, 0, 1.7321]
 
 ------ graph 14 -----------
 Adjacency matrix :
-0 1 1 0
-1 0 0 0
+0 1 0 0
 1 0 0 0
 0 0 0 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+0 0 0 0
+Eigenvalues : [-1.0, 0, 0, 1.0]
 
 ------ graph 15 -----------
 Adjacency matrix :
-0 1 1 0
-1 0 1 0
-1 1 0 1
+0 0 0 0
 0 0 1 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+0 1 0 0
+0 0 0 0
+Eigenvalues : [-1.0, 0, 0, 1.0]
 
 ------ graph 16 -----------
 Adjacency matrix :
 0 0 1 0
-0 0 0 1
+0 0 0 0
 1 0 0 1
-0 1 1 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
+0 0 1 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
 
 ------ graph 17 -----------
 Adjacency matrix :
-0 1 0 0
-1 0 0 1
-0 0 0 0
-0 1 0 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+0 1 0 1
+1 0 1 0
+0 1 0 1
+1 0 1 0
+Eigenvalues : [-2.0, 0, 0, 2.0]
 
 ------ graph 18 -----------
 Adjacency matrix :
-0 1 1 1
+0 1 1 0
 1 0 1 1
 1 1 0 0
-1 1 0 0
-Eigenvalues : [-1.5616, -1.0, 0, 2.5616]
+0 1 0 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
 
 ------ graph 19 -----------
 Adjacency matrix :
 0 0 1 1
 0 0 0 1
+1 0 0 0
+1 1 0 0
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
+
+------ graph 20 -----------
+Adjacency matrix :
+0 1 0 0
+1 0 1 1
+0 1 0 1
+0 1 1 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+
+------ graph 21 -----------
+Adjacency matrix :
+0 1 1 1
+1 0 1 0
+1 1 0 0
+1 0 0 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+
+------ graph 22 -----------
+Adjacency matrix :
+0 0 1 1
+0 0 0 0
+1 0 0 1
+1 0 1 0
+Eigenvalues : [-1.0, -1.0, 0, 2.0]
+
+------ graph 23 -----------
+Adjacency matrix :
+0 1 0 1
+1 0 1 1
+0 1 0 1
+1 1 1 0
+Eigenvalues : [-1.5616, -1.0, 0, 2.5616]
+
+------ graph 24 -----------
+Adjacency matrix :
+0 1 1 0
+1 0 0 1
+1 0 0 1
+0 1 1 0
+Eigenvalues : [-2.0, 0, 0, 2.0]
+
+------ graph 25 -----------
+Adjacency matrix :
+0 1 1 0
+1 0 1 0
+1 1 0 1
+0 0 1 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+
+------ graph 26 -----------
+Adjacency matrix :
+0 0 1 0
+0 0 0 1
+1 0 0 1
+0 1 1 0
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
+
+------ graph 27 -----------
+Adjacency matrix :
+0 1 1 0
+1 0 0 0
+1 0 0 1
+0 0 1 0
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
+
+------ graph 28 -----------
+Adjacency matrix :
+0 1 1 1
+1 0 1 1
+1 1 0 0
+1 1 0 0
+Eigenvalues : [-1.5616, -1.0, 0, 2.5616]
+
+------ graph 29 -----------
+Adjacency matrix :
+0 0 1 1
+0 0 0 1
 1 0 0 1
 1 1 1 0
 Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
 
------- graph 20 -----------
+------ graph 30 -----------
 Adjacency matrix :
-0 1 0 1
+0 1 1 1
 1 0 0 0
-0 0 0 0
-1 0 0 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+1 0 0 1
+1 0 1 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
 
------- graph 21 -----------
+------ graph 31 -----------
+Adjacency matrix :
+0 1 1 1
+1 0 0 1
+1 0 0 0
+1 1 0 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+
+------ graph 32 -----------
 Adjacency matrix :
 0 1 1 1
 1 0 1 0
@@ -166,23 +254,15 @@ Adjacency matrix :
 1 0 1 0
 Eigenvalues : [-1.5616, -1.0, 0, 2.5616]
 
------- graph 22 -----------
+------ graph 33 -----------
 Adjacency matrix :
-0. 0. 0. 0.
-0. 0. 0. 0.
-0. 0. 0. 0.
-0. 0. 0. 0.
-Eigenvalues : [0, 0, 0, 0]
-
------- graph 23 -----------
-Adjacency matrix :
-0 1 0 0
-1 0 0 0
-0 0 0 1
 0 0 1 0
-Eigenvalues : [-1.0, -1.0, 1.0, 1.0]
+0 0 1 0
+1 1 0 0
+0 0 0 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
 
------- graph 24 -----------
+------ graph 34 -----------
 Adjacency matrix :
 0 1 1 0
 1 0 1 1
@@ -190,23 +270,15 @@ Adjacency matrix :
 0 1 1 0
 Eigenvalues : [-1.5616, -1.0, 0, 2.5616]
 
------- graph 25 -----------
+------ graph 35 -----------
 Adjacency matrix :
-0 0 1 0
-0 0 1 1
-1 1 0 0
-0 1 0 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
-
------- graph 26 -----------
-Adjacency matrix :
-0 1 0 1
-1 0 0 1
 0 0 0 0
-1 1 0 0
-Eigenvalues : [-1.0, -1.0, 0, 2.0]
+0 0 0 1
+0 0 0 0
+0 1 0 0
+Eigenvalues : [-1.0, 0, 0, 1.0]
 
------- graph 27 -----------
+------ graph 36 -----------
 Adjacency matrix :
 0 1 1 1
 1 0 1 1
@@ -214,159 +286,23 @@ Adjacency matrix :
 1 1 1 0
 Eigenvalues : [-1.0, -1.0, -1.0, 3.0]
 
------- graph 28 -----------
-Adjacency matrix :
-0 0 1 1
-0 0 1 0
-1 1 0 0
-1 0 0 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
-
------- graph 29 -----------
-Adjacency matrix :
-0 1 0 1
-1 0 0 0
-0 0 0 1
-1 0 1 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
-
------- graph 30 -----------
-Adjacency matrix :
-0 0 0 0
-0 0 1 0
-0 1 0 0
-0 0 0 0
-Eigenvalues : [-1.0, 0, 0, 1.0]
-
------- graph 31 -----------
-Adjacency matrix :
-0 0 1 0
-0 0 1 0
-1 1 0 1
-0 0 1 0
-Eigenvalues : [-1.7321, 0, 0, 1.7321]
-
------- graph 32 -----------
-Adjacency matrix :
-0 1 0 0
-1 0 0 1
-0 0 0 1
-0 1 1 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
-
------- graph 33 -----------
-Adjacency matrix :
-0 1 0 0
-1 0 1 1
-0 1 0 0
-0 1 0 0
-Eigenvalues : [-1.7321, 0, 0, 1.7321]
-
------- graph 34 -----------
-Adjacency matrix :
-0 0 1 1
-0 0 1 1
-1 1 0 0
-1 1 0 0
-Eigenvalues : [-2.0, 0, 0, 2.0]
-
------- graph 35 -----------
-Adjacency matrix :
-0 1 0 1
-1 0 0 1
-0 0 0 1
-1 1 1 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
-
------- graph 36 -----------
-Adjacency matrix :
-0 1 0 1
-1 0 1 0
-0 1 0 0
-1 0 0 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
-
 ------ graph 37 -----------
 Adjacency matrix :
-0 0 1 1
-0 0 1 0
-1 1 0 1
-1 0 1 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+0 0 0 1
+0 0 0 0
+0 0 0 0
+1 0 0 0
+Eigenvalues : [-1.0, 0, 0, 1.0]
 
 ------ graph 38 -----------
 Adjacency matrix :
-0 0 1 0
-0 0 0 0
-1 0 0 0
-0 0 0 0
-Eigenvalues : [-1.0, 0, 0, 1.0]
-
------- graph 39 -----------
-Adjacency matrix :
-0 0 1 0
-0 0 1 1
-1 1 0 1
-0 1 1 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
-
------- graph 40 -----------
-Adjacency matrix :
-0 1 0 0
-1 0 1 0
-0 1 0 1
-0 0 1 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
-
------- graph 41 -----------
-Adjacency matrix :
-0 1 1 0
+0 1 1 1
 1 0 0 1
-1 0 0 0
-0 1 0 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
-
------- graph 42 -----------
-Adjacency matrix :
-0 1 0 1
-1 0 1 1
-0 1 0 0
-1 1 0 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
-
------- graph 43 -----------
-Adjacency matrix :
-0 0 1 1
-0 0 1 1
-1 1 0 1
+1 0 0 1
 1 1 1 0
 Eigenvalues : [-1.5616, -1.0, 0, 2.5616]
 
------- graph 44 -----------
-Adjacency matrix :
-0 1 1 1
-1 0 0 0
-1 0 0 0
-1 0 0 0
-Eigenvalues : [-1.7321, 0, 0, 1.7321]
-
------- graph 45 -----------
-Adjacency matrix :
-0 1 0 1
-1 0 1 0
-0 1 0 1
-1 0 1 0
-Eigenvalues : [-2.0, 0, 0, 2.0]
-
------- graph 46 -----------
-Adjacency matrix :
-0 1 1 0
-1 0 1 0
-1 1 0 0
-0 0 0 0
-Eigenvalues : [-1.0, -1.0, 0, 2.0]
-
------- graph 47 -----------
+------ graph 39 -----------
 Adjacency matrix :
 0 1 0 0
 1 0 1 0
@@ -374,139 +310,203 @@ Adjacency matrix :
 0 0 0 0
 Eigenvalues : [-1.4142, 0, 0, 1.4142]
 
------- graph 48 -----------
+------ graph 40 -----------
 Adjacency matrix :
 0 1 1 0
 1 0 0 0
-1 0 0 1
+1 0 0 0
+0 0 0 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
+
+------ graph 41 -----------
+Adjacency matrix :
+0 0 0 0
+0 0 0 0
+0 0 0 1
 0 0 1 0
-Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
+Eigenvalues : [-1.0, 0, 0, 1.0]
+
+------ graph 42 -----------
+Adjacency matrix :
+0 0 1 0
+0 0 0 0
+1 0 0 0
+0 0 0 0
+Eigenvalues : [-1.0, 0, 0, 1.0]
+
+------ graph 43 -----------
+Adjacency matrix :
+0 1 0 0
+1 0 0 1
+0 0 0 0
+0 1 0 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
+
+------ graph 44 -----------
+Adjacency matrix :
+0 0 0 1
+0 0 0 1
+0 0 0 0
+1 1 0 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
+
+------ graph 45 -----------
+Adjacency matrix :
+0 1 0 1
+1 0 0 0
+0 0 0 0
+1 0 0 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
+
+------ graph 46 -----------
+Adjacency matrix :
+0 0 0 1
+0 0 0 0
+0 0 0 1
+1 0 1 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
+
+------ graph 47 -----------
+Adjacency matrix :
+0. 0. 0. 0.
+0. 0. 0. 0.
+0. 0. 0. 0.
+0. 0. 0. 0.
+Eigenvalues : [0, 0, 0, 0]
+
+------ graph 48 -----------
+Adjacency matrix :
+0 0 0 0
+0 0 1 1
+0 1 0 0
+0 1 0 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
 
 ------ graph 49 -----------
 Adjacency matrix :
 0 1 0 0
-1 0 1 1
-0 1 0 1
-0 1 1 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+1 0 0 0
+0 0 0 1
+0 0 1 0
+Eigenvalues : [-1.0, -1.0, 1.0, 1.0]
 
 ------ graph 50 -----------
 Adjacency matrix :
 0 0 0 0
 0 0 0 1
-0 0 0 0
-0 1 0 0
-Eigenvalues : [-1.0, 0, 0, 1.0]
+0 0 0 1
+0 1 1 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
 
 ------ graph 51 -----------
 Adjacency matrix :
-0 1 1 1
-1 0 0 1
+0 0 0 1
+0 0 1 0
+0 1 0 0
 1 0 0 0
-1 1 0 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+Eigenvalues : [-1.0, -1.0, 1.0, 1.0]
 
 ------ graph 52 -----------
 Adjacency matrix :
 0 1 0 1
-1 0 1 1
-0 1 0 1
-1 1 1 0
-Eigenvalues : [-1.5616, -1.0, 0, 2.5616]
+1 0 0 1
+0 0 0 0
+1 1 0 0
+Eigenvalues : [-1.0, -1.0, 0, 2.0]
 
 ------ graph 53 -----------
 Adjacency matrix :
 0 0 0 1
-0 0 0 0
-0 0 0 0
-1 0 0 0
-Eigenvalues : [-1.0, 0, 0, 1.0]
+0 0 0 1
+0 0 0 1
+1 1 1 0
+Eigenvalues : [-1.7321, 0, 0, 1.7321]
 
 ------ graph 54 -----------
 Adjacency matrix :
-0 0 1 1
 0 0 0 0
-1 0 0 1
-1 0 1 0
-Eigenvalues : [-1.0, -1.0, 0, 2.0]
+0 0 1 0
+0 1 0 1
+0 0 1 0
+Eigenvalues : [-1.4142, 0, 0, 1.4142]
 
 ------ graph 55 -----------
 Adjacency matrix :
-0 1 1 1
+0 1 0 1
 1 0 0 0
-1 0 0 1
+0 0 0 1
 1 0 1 0
-Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
 
 ------ graph 56 -----------
 Adjacency matrix :
-0 1 0 0
-1 0 0 0
+0 1 1 0
+1 0 1 0
+1 1 0 0
 0 0 0 0
-0 0 0 0
-Eigenvalues : [-1.0, 0, 0, 1.0]
+Eigenvalues : [-1.0, -1.0, 0, 2.0]
 
 ------ graph 57 -----------
 Adjacency matrix :
-0 0 0 0
-0 0 0 0
 0 0 0 1
-0 0 1 0
-Eigenvalues : [-1.0, 0, 0, 1.0]
+0 0 1 1
+0 1 0 0
+1 1 0 0
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
 
 ------ graph 58 -----------
 Adjacency matrix :
-0 1 1 0
+0 1 0 0
 1 0 0 1
-1 0 0 1
+0 0 0 1
 0 1 1 0
-Eigenvalues : [-2.0, 0, 0, 2.0]
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
 
 ------ graph 59 -----------
 Adjacency matrix :
 0 0 1 0
-0 0 0 1
-1 0 0 0
+0 0 1 1
+1 1 0 0
 0 1 0 0
-Eigenvalues : [-1.0, -1.0, 1.0, 1.0]
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
 
 ------ graph 60 -----------
 Adjacency matrix :
 0 0 0 1
-0 0 0 1
-0 0 0 0
-1 1 0 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+0 0 1 0
+0 1 0 1
+1 0 1 0
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
 
 ------ graph 61 -----------
 Adjacency matrix :
-0 0 0 0
-0 0 1 1
-0 1 0 0
-0 1 0 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+0 1 0 1
+1 0 0 1
+0 0 0 1
+1 1 1 0
+Eigenvalues : [-1.4812, -1.0, 0.3111, 2.1701]
 
 ------ graph 62 -----------
 Adjacency matrix :
-0 1 1 1
-1 0 0 1
-1 0 0 1
-1 1 1 0
-Eigenvalues : [-1.5616, -1.0, 0, 2.5616]
+0 0 1 1
+0 0 1 0
+1 1 0 0
+1 0 0 0
+Eigenvalues : [-1.618, -0.618, 0.618, 1.618]
 
 ------ graph 63 -----------
 Adjacency matrix :
-0 0 0 1
-0 0 1 0
-0 1 0 0
-1 0 0 0
-Eigenvalues : [-1.0, -1.0, 1.0, 1.0]
+0 0 0 0
+0 0 1 1
+0 1 0 1
+0 1 1 0
+Eigenvalues : [-1.0, -1.0, 0, 2.0]
 
 ------ graph 64 -----------
 Adjacency matrix :
-0 0 0 1
-0 0 0 0
-0 0 0 1
-1 0 1 0
-Eigenvalues : [-1.4142, 0, 0, 1.4142]
+0 0 1 0
+0 0 1 0
+1 1 0 1
+0 0 1 0
+Eigenvalues : [-1.7321, 0, 0, 1.7321]
 

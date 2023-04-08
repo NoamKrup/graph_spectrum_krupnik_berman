@@ -1,13 +1,8 @@
 import networkx as nx
 from scipy import linalg
-from itertools import chain, combinations
+import itertools
 import arithmetic_utils as au
-
-def create_simple_graph_with_edges(edges):
-    g = nx.Graph()
-    g.add_nodes_from([1, 2, 3, 4])
-    g.add_edges_from(edges)
-    return g
+import numpy as np
 
 
 def get_adjacency_matrix(G):
@@ -19,6 +14,16 @@ def get_formatted_adjacency_matrix(g):
     a = get_adjacency_matrix(g)
     return f'{a}'.replace("[", "").replace("]", "").replace("\n ", "\n")
 
+def format_matrix_for_printing(g, name):
+    adjacency_matrix = get_adjacency_matrix(g)
+    formated_adjacency_matrix = f'{adjacency_matrix}'.replace("[", "").replace("]", "").replace("\n ", "\n")
+    eigenvalues = get_eigenvalues_of_graph(g)
+    formated_eigenvalues = format_eigenvalues(eigenvalues)
+    text = f'------ graph {name} -----------\n'
+    text += f'Adjacency matrix :\n{formated_adjacency_matrix}\n'
+    text += f'Eigenvalues : {formated_eigenvalues}\n\n'
+    return text
+
 
 def format_eigenvalues(eigenvalues):
     eigenvalues = [round(eigenvalue, 4) for eigenvalue in eigenvalues]
@@ -27,11 +32,26 @@ def format_eigenvalues(eigenvalues):
 
 def get_eigenvalues_of_graph(G):
     A = nx.adjacency_matrix(G)
-    printable = f'Adjacency matrix :\n{A.todense()}'.replace("[", "").replace("]", "").replace("\n ", "\n")
     eigenvalues = linalg.eigh(A.todense(), eigvals_only=True)
     # round eigenvalues to 4 decimal places
     eigenvalues = format_eigenvalues(eigenvalues)
     return eigenvalues
+
+
+def reduce_graphs(graphs):
+    adj_matrices = list()
+    for g in graphs:
+        a = get_adjacency_matrix(g)
+        adj_matrices.append(a)
+    # for mat in adj_matrices:
+        # permutation = generate_all_permutations(len(mat))
+        # permutation_matrices = [p * mat * p.transpose() for p in permutation]
+        # for m in itertools.permutations(permutation):
+        #
+        #     perm_mat = perm.todense()
+        #     perm_graph = perm_mat * mat * perm_mat.transpose()
+        #     if perm_mat in adj_matrices and perm_mat != mat:
+        #         graphs.remove(g)
 
 
 def create_all_graphes_with_n_vertices(n):
