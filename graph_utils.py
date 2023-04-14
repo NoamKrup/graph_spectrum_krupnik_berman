@@ -45,9 +45,9 @@ def reduce_graphs(graphs):
             for secondary_matrix in adj_matrices:
                 if mu.is_matrices_equal(secondary_matrix, permuted_matrix) and not mu.is_matrices_equal(main_matrix, secondary_matrix):
                     mu.remove_matrix_from_list(adj_matrices, permuted_matrix)
-                    print(f'original matrix \n{main_matrix}, removed_matrix \n{permuted_matrix}')
+                    # print(f'original matrix \n{main_matrix}, removed_matrix \n{permuted_matrix}')
     final_list_length = len(adj_matrices)
-    print(f'started with : {initial_list_length} possible graphs \nended with {final_list_length} graphs that are not isomorphic to each other')
+    # print(f'started with : {initial_list_length} possible graphs \nended with {final_list_length} graphs that are not isomorphic to each other')
     return adj_matrices
 
 

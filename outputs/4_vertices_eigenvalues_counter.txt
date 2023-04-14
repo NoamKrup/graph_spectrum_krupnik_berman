@@ -1,39 +1,23 @@
 ---------- 4 vertices graphs eigenvalues Equivalence classes ----------
 ------ class 1 -----------
-eigenvalues : -1.0 , count = 10
+eigenvalues : (-1.618, -0.618, 0.618, 1.618) , count = 1
 ------ class 2 -----------
-eigenvalues : 0 , count = 14
+eigenvalues : (-1.4812, -1.0, 0.3111, 2.1701) , count = 1
 ------ class 3 -----------
-eigenvalues : 1.0 , count = 3
+eigenvalues : (-1.7321, 0, 0, 1.7321) , count = 1
 ------ class 4 -----------
-eigenvalues : -1.5616 , count = 1
+eigenvalues : (-1.5616, -1.0, 0, 2.5616) , count = 1
 ------ class 5 -----------
-eigenvalues : 2.5616 , count = 1
+eigenvalues : (-1.0, 0, 0, 1.0) , count = 1
 ------ class 6 -----------
-eigenvalues : -2.0 , count = 1
+eigenvalues : (-2.0, 0, 0, 2.0) , count = 1
 ------ class 7 -----------
-eigenvalues : 2.0 , count = 2
+eigenvalues : (-1.0, -1.0, -1.0, 3.0) , count = 1
 ------ class 8 -----------
-eigenvalues : -1.4812 , count = 1
+eigenvalues : (-1.4142, 0, 0, 1.4142) , count = 1
 ------ class 9 -----------
-eigenvalues : 0.3111 , count = 1
+eigenvalues : (-1.0, -1.0, 1.0, 1.0) , count = 1
 ------ class 10 -----------
-eigenvalues : 2.1701 , count = 1
+eigenvalues : (-1.0, -1.0, 0, 2.0) , count = 1
 ------ class 11 -----------
-eigenvalues : -1.4142 , count = 1
------- class 12 -----------
-eigenvalues : 1.4142 , count = 1
------- class 13 -----------
-eigenvalues : 3.0 , count = 1
------- class 14 -----------
-eigenvalues : -1.618 , count = 1
------- class 15 -----------
-eigenvalues : -0.618 , count = 1
------- class 16 -----------
-eigenvalues : 0.618 , count = 1
------- class 17 -----------
-eigenvalues : 1.618 , count = 1
------- class 18 -----------
-eigenvalues : -1.7321 , count = 1
------- class 19 -----------
-eigenvalues : 1.7321 , count = 1
+eigenvalues : (0, 0, 0, 0) , count = 1

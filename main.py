@@ -24,11 +24,15 @@ def print_n_vertices_graphs_relevant_file(n):
     reduced_graph_matrices_set = pu.get_reduced_graphs_and_print_to_file(graphs)
     pu.print_eigenvalues_counter_to_file(reduced_graph_matrices_set)
 
+def print_n_vertices_eigen_only_to_relevant_file(n):
+    graphs = gu.create_all_graphes_with_n_vertices(n)
+    reduced_graph_matrices_set = pu.get_reduced_graphs_and_print_to_file(graphs)
+    pu.print_eigenvalues_counter_to_file(reduced_graph_matrices_set)
 
 
 if __name__ == '__main__':
-    n = 4
-    print_n_vertices_graphs_relevant_file(n)
+    n = 6
+    print_n_vertices_eigen_only_to_relevant_file(n)
 
 
     # n = 5
