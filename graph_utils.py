@@ -3,7 +3,8 @@ from scipy import linalg
 import itertools
 import arithmetic_utils as au
 import numpy as np
-
+import matrix_utils as mu
+import random
 
 def get_adjacency_matrix(G):
     A = nx.adjacency_matrix(G)
@@ -14,44 +15,40 @@ def get_formatted_adjacency_matrix(g):
     a = get_adjacency_matrix(g)
     return f'{a}'.replace("[", "").replace("]", "").replace("\n ", "\n")
 
-def format_matrix_for_printing(g, name):
-    adjacency_matrix = get_adjacency_matrix(g)
-    formated_adjacency_matrix = f'{adjacency_matrix}'.replace("[", "").replace("]", "").replace("\n ", "\n")
-    eigenvalues = get_eigenvalues_of_graph(g)
-    formated_eigenvalues = format_eigenvalues(eigenvalues)
-    text = f'------ graph {name} -----------\n'
-    text += f'Adjacency matrix :\n{formated_adjacency_matrix}\n'
-    text += f'Eigenvalues : {formated_eigenvalues}\n\n'
-    return text
+
+def get_n_from_graphs_set(graphs):
+    for g in graphs:
+        return len(g.nodes())
 
 
-def format_eigenvalues(eigenvalues):
-    eigenvalues = [round(eigenvalue, 4) for eigenvalue in eigenvalues]
-    eigenvalues2 = list(map(lambda x: 0 if x == 0 or x == -0 else x, eigenvalues))
-    return eigenvalues2
 
-def get_eigenvalues_of_graph(G):
-    A = nx.adjacency_matrix(G)
-    eigenvalues = linalg.eigh(A.todense(), eigvals_only=True)
-    # round eigenvalues to 4 decimal places
-    eigenvalues = format_eigenvalues(eigenvalues)
+def get_eigenvalues_of_graph(g):
+    a = nx.adjacency_matrix(g).todense()
+    eigenvalues = mu.get_eigenvalues_of_a_matrix(a)
     return eigenvalues
 
 
 def reduce_graphs(graphs):
     adj_matrices = list()
+    # create adjacency matrices
     for g in graphs:
-        a = get_adjacency_matrix(g)
+        a = nx.adjacency_matrix(g).toarray()
         adj_matrices.append(a)
-    # for mat in adj_matrices:
-        # permutation = generate_all_permutations(len(mat))
-        # permutation_matrices = [p * mat * p.transpose() for p in permutation]
-        # for m in itertools.permutations(permutation):
-        #
-        #     perm_mat = perm.todense()
-        #     perm_graph = perm_mat * mat * perm_mat.transpose()
-        #     if perm_mat in adj_matrices and perm_mat != mat:
-        #         graphs.remove(g)
+        # a = get_adjacency_matrix(g)
+    # remove permutations
+    initial_list_length = len(adj_matrices)
+    permutation_mateices = mu.generate_all_permutation_matrices(get_n_from_graphs_set(graphs))
+    for main_matrix in adj_matrices:
+        for p in permutation_mateices:
+            p_times_matrix = np.matmul(p, main_matrix)
+            permuted_matrix = np.matmul(p_times_matrix, p.transpose())
+            for secondary_matrix in adj_matrices:
+                if mu.is_matrices_equal(secondary_matrix, permuted_matrix) and not mu.is_matrices_equal(main_matrix, secondary_matrix):
+                    mu.remove_matrix_from_list(adj_matrices, permuted_matrix)
+                    print(f'original matrix \n{main_matrix}, removed_matrix \n{permuted_matrix}')
+    final_list_length = len(adj_matrices)
+    print(f'started with : {initial_list_length} possible graphs \nended with {final_list_length} graphs that are not isomorphic to each other')
+    return adj_matrices
 
 
 def create_all_graphes_with_n_vertices(n):
