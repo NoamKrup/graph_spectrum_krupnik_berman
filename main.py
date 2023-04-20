@@ -31,8 +31,9 @@ def print_n_vertices_eigen_only_to_relevant_file(n):
 
 
 if __name__ == '__main__':
-    n = 6
+    n = 4
     print_n_vertices_eigen_only_to_relevant_file(n)
+    # sandbox.crete_simple_graph()
 
 
     # n = 5
@@ -41,3 +42,4 @@ if __name__ == '__main__':
     # au.print_eigenvalues_counter_to_file(eigenvalues, n)
     # graphs = create_all_graphes_with_n_vertices(4)
     # print_all_graphs_with_n_vertices_to_file(4)
+
