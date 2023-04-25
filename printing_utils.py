@@ -41,7 +41,7 @@ def print_all_graphs_to_file(graphs):
 
 def get_reduced_graphs_and_print_to_file(graphs):
     n = gu.get_n_from_graphs_set(graphs)
-    reduced_graphs_matrices = gu.reduce_graphs(graphs)
+    reduced_graphs_matrices = gu.reduce_graphs(graphs, output_format=GraphFormat.NXGRAPH)
     text = ''
     graph_counter = 1
     file_name = f'outputs/reduced_graphs_{n}_vertices.txt'
@@ -67,7 +67,7 @@ def format_matrix_for_printing(matrix, name):
     return text
 
 
-def format_graph_for_printing(g, name):
+def     format_graph_for_printing(g, name):
     adjacency_matrix = gu.get_adjacency_matrix(g)
     return format_matrix_for_printing(adjacency_matrix, name)
 

@@ -1,13 +1,3 @@
-import sys
-import os
-import networkx as nx
-import matplotlib.pyplot as plt
-import scipy
-from scipy import linalg
-from itertools import chain, combinations
-from collections import Counter
-import unit_tests
-
 # my stuff
 import graph_utils as gu
 import matrix_utils as mu
@@ -25,7 +15,7 @@ def print_n_vertices_graphs_relevant_file(n):
     pu.print_eigenvalues_counter_to_file(reduced_graph_matrices_set)
 
 def print_n_vertices_eigen_only_to_relevant_file(n):
-    graphs = gu.create_all_graphes_with_n_vertices(n)
+    graphs = gu.create_all_graphes_with_n_vertices_as_matrices(n)
     reduced_graph_matrices_set = pu.get_reduced_graphs_and_print_to_file(graphs)
     pu.print_eigenvalues_counter_to_file(reduced_graph_matrices_set)
 

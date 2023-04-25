@@ -11,7 +11,7 @@ from collections import Counter
 def test_spectrum_classification_without_permutated_repetitions(n):
     eigenvalues_counter = Counter()
     graphs = gu.create_all_graphes_with_n_vertices(n)
-    matrices = gu.reduce_graphs(graphs)
+    matrices = gu.reduce_graphs(graphs, )
     matrices_counter = 1
     for m in matrices:
         eigenvalues = mu.get_eigenvalues_of_a_matrix(m)
