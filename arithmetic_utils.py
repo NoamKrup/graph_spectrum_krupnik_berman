@@ -9,6 +9,9 @@ def powerset(iterable):
     return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
 
 
+def create_all_zero_one_verctors_of_length_n(n):
+    return list(powerset(range(n)))
+
 def get_eigenvalues_counter_of_matrix_set(matrices):
     eigenvalues_counter = Counter()
     matrices_counter = 1

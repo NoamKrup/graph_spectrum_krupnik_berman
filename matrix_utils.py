@@ -30,14 +30,28 @@ def is_matrices_equal(m1, m2):
     return is_equal
 
 def remove_matrix_from_list(List, martix):
-    ind = 0
+    i = 0
     size = len(List)
-    while ind != size and not np.array_equal(List[ind], martix):
-        ind += 1
-    if ind != size:
-        List.pop(ind)
+    while i != size and not np.array_equal(List[i], martix):
+        i += 1
+    if i != size:
+        List.pop(i)
     else:
         raise ValueError('array not found in list.')
+
+def remove_duplications_from_list(matrices):
+    reduced_matrices = list()
+    i = 0
+    size = len(reduced_matrices)
+    while i != size:
+        j = i + 1
+        while j != size:
+            if reduced_matrices[i] == reduced_matrices[j]:
+                reduced_matrices.pop(j)
+                size -= 1
+            j += 1
+        i += 1
+    return reduced_matrices
 
 
 def get_n_from_matrix_list(List):

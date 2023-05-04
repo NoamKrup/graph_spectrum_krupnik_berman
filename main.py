@@ -31,8 +31,12 @@ def print_n_vertices_eigen_only_to_relevant_file(n):
 
 
 if __name__ == '__main__':
-    n = 4
-    print_n_vertices_eigen_only_to_relevant_file(n)
+    n = 5
+    gu.create_all_graphs_with_n_vertices_as_matrices(n)
+    # graphs = gu.create_all_graphes_with_n_vertices(n)
+    # gu.reduce_graphs(graphs)
+    # print(sandbox.one_node_graph())
+    # print_n_vertices_eigen_only_to_relevant_file(n)
     # sandbox.crete_simple_graph()
 
 
